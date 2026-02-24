@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - DontClickThat</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Inter:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* TEAM SECTION */
+
+        .team-container {
+            margin-top: 40px;
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .member {
+            flex: 1;
+            min-width: 200px;
+            background: var(--glass);
+            padding: 20px;
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .member:hover {
+            transform: translateY(-8px);
+        }
+
+        .member img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border: 3px solid var(--primary);
+        }
+
+        .member h3 {
+            margin-bottom: 10px;
+        }
+
+        .member p {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="themeToggle" class="theme-btn">🌙</button>
+
+    <div class="sidebar">
+        <div class="logo">DontClickThat</div>
+
+        <div class="nav">
+            <button onclick="location.href='index.html'">Home</button>
+            <button onclick="location.href='checker.html'">Scan URL</button>
+            <button onclick="location.href='learn.html'">Learn</button>
+            <button onclick="location.href='quiz.html'">Quiz</button>
+            <button onclick="location.href='about.html'">About</button>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="card">
+            <h1>Team Cube</h1>
+
+            <div class="team-container">
+                <div class="member">
+                    <h3>Priyanshi Saxena</h3>
+                    <p>Reg no. 25BAI10117</p>
+                </div>
+
+                <div class="member">
+                    <h3>Bhoomika Kushwaha</h3>
+                    <p>Reg no. 25BAI10015</p>
+                </div>
+
+                <div class="member">
+                    <h3>Navya Agrawal</h3>
+                    <p>Reg no. 25BAI10204</p>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <h2>About DontClickThat</h2>
+            <p style="margin-top:15px;">
+                URL Safety Checker is your smart defense against dangerous links. In a world full of phishing scams and
+                fake websites, we help you stay one step ahead by analyzing URLs before you click. Built during a
+                hackathon with a mission to promote safer browsing, our tool quickly detects suspicious links and
+                potential threats — simple, fast, and reliable. Because online safety should be easy for everyone.
+            </p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

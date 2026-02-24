@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DontClickThat</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Inter:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <button id="themeToggle" class="theme-btn">🌙</button>
+
+    <div class="sidebar">
+        <div class="logo"> DontClickThat</div>
+
+        <div class="nav">
+            <button onclick="location.href='index.html'"> Home</button>
+            <button onclick="location.href='checker.html'"> Scan URL</button>
+            <button onclick="location.href='learn.html'"> Learn</button>
+            <button onclick="location.href='quiz.html'"> Quiz</button>
+            <button onclick="location.href='about.html'">About</button>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="card">
+            <h2>How to Identify Malicious Links</h2>
+
+            <h3 style="margin-top:30px;text-align:left;">What Is a Malicious Link?</h3>
+            <p style="text-align:left; line-height:26px;">
+                A malicious link is a URL designed to steal your personal data, install malware,
+                redirect you to fake login pages, or trick you into financial scams.
+                Attackers often disguise these links to look legitimate and rely on urgency or panic
+                to make users click quickly.
+            </p>
+
+            <h3 style="margin-top:30px;text-align:left;">Common Types of Dangerous Links</h3>
+
+            <h4 style="margin-top:15px;text-align:left;">1. Phishing Links</h4>
+            <p style="text-align:left; line-height:26px;">
+                Fake websites that copy real ones like banking or social media login pages.
+                Their goal is to steal usernames and passwords.
+                Example: www.faceb00k-login.com
+            </p>
+
+            <h4 style="margin-top:15px;text-align:left;">2. Malware Download Links</h4>
+            <p style="text-align:left; line-height:26px;">
+                Clicking these links may automatically download harmful files to your device.
+                They often appear as fake invoices, prize notifications, or security updates.
+            </p>
+
+            <h4 style="margin-top:15px;text-align:left;">3. URL Shorteners</h4>
+            <p style="text-align:left; line-height:26px;">
+                Shortened links hide the real destination. You cannot see where they lead
+                unless you expand them first.
+            </p>
+
+            <h4 style="margin-top:15px;text-align:left;">4. Typosquatting Domains</h4>
+            <p style="text-align:left; line-height:26px;">
+                Scammers register domains that look almost identical to real websites.
+                Example: amaz0n.com or paypa1.com
+            </p>
+
+            <h3 style="margin-top:30px;text-align:left;">How to Analyze a URL</h3>
+            <p style="text-align:left; line-height:26px;">
+                Break the URL into parts. The actual domain name appears right before
+                .com, .org, .net, etc. Always check for extra words, strange subdomains,
+                or unusual country extensions.
+            </p>
+
+            <h3 style="margin-top:30px;text-align:left;">Suspicious Domain Extensions</h3>
+            <ul style="text-align:left; line-height:26px;">
+                <li>.xyz</li>
+                <li>.tk</li>
+                <li>.ru</li>
+                <li>.top</li>
+                <li>.club</li>
+            </ul>
+
+            <h3 style="margin-top:30px;text-align:left;">Social Engineering Tricks</h3>
+            <p style="text-align:left; line-height:26px;">
+                Many attacks rely on emotional manipulation. Messages may say:
+            </p>
+            <ul style="text-align:left; line-height:26px;">
+                <li>Your account will be suspended in 24 hours</li>
+                <li>Click here to claim your reward</li>
+                <li>Urgent payment failed</li>
+            </ul>
+
+            <h3 style="margin-top:30px;text-align:left;">Safety Best Practices</h3>
+            <ul style="text-align:left; line-height:26px;">
+                <li>Hover over links before clicking</li>
+                <li>Type important website addresses manually</li>
+                <li>Use a password manager</li>
+                <li>Enable two-factor authentication</li>
+                <li>Keep your browser and system updated</li>
+            </ul>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

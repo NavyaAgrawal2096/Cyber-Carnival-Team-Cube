@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DontClickThat</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Inter:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+    </style>
+</head>
+<button id="themeToggle" class="theme-btn">🌙</button>
+
+<body>
+
+    <div class="sidebar">
+        <div class="logo"> DontClickThat</div>
+
+        <div class="nav">
+            <button onclick="location.href='index.html'"> Home</button>
+            <button onclick="location.href='checker.html'"> Scan URL</button>
+            <button onclick="location.href='learn.html'"> Learn</button>
+            <button onclick="location.href='quiz.html'"> Quiz</button>
+            <button onclick="location.href='about.html'">About</button>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="card">
+            <h2>URL Safety Quiz</h2>
+
+            <button id="startBtn" class="action-btn" onclick="startQuiz()">Start Quiz</button>
+
+            <p id="question" style="margin-top:20px;"></p>
+
+            <div id="quizControls" style="display:none;">
+                <button class="action-btn" onclick="answer(true)">Safe</button>
+                <button class="action-btn" onclick="answer(false)">Suspicious</button>
+            </div>
+
+            <h3 id="quizScore" style="margin-top:20px;"></h3>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script>
+
+        let quizData = [];
+        let qi = 0, qs = 0;
+
+        function startQuiz() {
+            quizData = generateRandomQuestions();
+            qi = 0;
+            qs = 0;
+
+            // Hide start button
+            document.getElementById("startBtn").style.display = "none";
+
+            // Show answer buttons
+            document.getElementById("quizControls").style.display = "block";
+
+            document.getElementById("quizScore").innerHTML = "";
+
+            loadQuestion();
+        }
+
+        function loadQuestion() {
+            document.getElementById("question").innerHTML =
+                "Is this safe?<br><b>" + quizData[qi][0] + "</b>";
+        }
+
+        function answer(ans) {
+            if (ans == quizData[qi][1]) qs++;
+            qi++;
+
+            if (qi < quizData.length) {
+                loadQuestion();
+            } else {
+                document.getElementById("question").innerHTML = "";
+                document.getElementById("quizControls").style.display = "none";
+
+                // Show final score
+                document.getElementById("quizScore").innerHTML =
+                    "Final Score: " + qs + "/" + quizData.length;
+
+                // Show start button again for replay
+                document.getElementById("startBtn").style.display = "inline-block";
+            }
+        }
+
+        function generateRandomQuestions() {
+            let urls = [
+                ["https://google.com", true],
+                ["https://github.com", true],
+                ["https://amazon.in", true],
+                ["https://openai.com", true],
+                ["http://verify-bank-login.xyz", false],
+                ["http://free-money-now.ru", false],
+                ["https://bit.ly/freegift", false],
+                ["http://secure-paypal-login.net", false],
+                ["http://win-a-car-now.biz", false]
+            ];
+
+            // Shuffle
+            urls.sort(() => 0.5 - Math.random());
+
+            // Pick 5 random
+            return urls.slice(0, 5);
+        }
+    </script>
+</body>
+
+</html>
