@@ -77,9 +77,4 @@ Developed by **Team Cube**:
 3. Open `index.html` in any modern web browser.
 4. Explore the learning modules and interactive features.
 
----
-
-##  License
-
-This project is developed for educational and awareness purposes as part of a hackathon initiative.
 
